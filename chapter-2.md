@@ -35,13 +35,34 @@ A script can only read or view data, hence the method `changeGreeting` which mod
 # Day 3
 
 ### 1. In a script, initialize an array (that has length == 3) of your favourite people, represented as `String`s, and `log` it.
+![image](https://user-images.githubusercontent.com/15671246/189350792-eb129217-cd36-489c-a614-7c1d0677f4ff.png)
 
 ### 2. In a script, initialize a dictionary that maps the `String`s Facebook, Instagram, Twitter, YouTube, Reddit, and LinkedIn to a `UInt64` that represents the order in which you use them from most to least. For example, YouTube --> 1, Reddit --> 2, etc. If you've never used one before, map it to 0!
+![image](https://user-images.githubusercontent.com/15671246/189350955-e8e54675-6f88-4bfa-9934-3c6ae46d001d.png)
 
 ### 3. Explain what the force unwrap operator `!` does, with an example different from the one I showed you (you can just change the type).
 
+The force unwrap operator `!` is used to convert optional type to normal type. It operates on optional and either returns the value or `panic`s if the value is nil.
+```cadence
+var optionalNumber: UInt64? = 11
+let number: UInt64 = optionalNumber! // Removes optional and returns UInt64
+  
+optionalNumber = nil
+let nilNumber: UInt64 = optionalNumber! // PANICs with message "unexpectedly found nil while forcing an Optional value".
+```
 ### 4. Using this picture below, explain...
 
 #### - What the error message means
+
+It means the return type of function is `String` but the `return` statement is returing an optional type `String?`.
+
 #### - Why we're getting this error
+
+Because the dictionary returns a value as an optional.
+
 #### - How to fix it
+
+Use unwrap operater `!`
+```cadence
+return thing[0x03]!
+```
