@@ -66,3 +66,15 @@ Use unwrap operater `!`
 ```cadence
 return thing[0x03]!
 ```
+
+# Day 4
+
+1. Deploy a new contract that has a Struct of your choosing inside of it (must be different than Profile).
+2. Create a dictionary or array that contains the Struct you defined.
+3. Create a function to add to that array/dictionary.
+4. Add a transaction to call that function in step 3.
+5. Add a script to read the Struct you defined.
+
+![image](https://user-images.githubusercontent.com/15671246/189462680-29ee0788-a54f-4a53-b438-40084f760a62.png)
+![image](https://user-images.githubusercontent.com/15671246/189462698-e251f6f5-1e82-409d-bd24-fea343b12f0e.png)
+![image](https://user-images.githubusercontent.com/15671246/189462778-1fec3d96-8f02-4758-ab8d-cfc1bff73215.png)
